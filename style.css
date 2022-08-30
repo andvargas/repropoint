@@ -150,6 +150,9 @@ a { color: inherit; }
 .myButton:hover {
   background-color: white;
 }
+#footer-wrapper {
+  background-color: #FAFAFA;
+}
 @media screen and (min-width: 1024px) {
     .main-navigation {
         display: none !important;
