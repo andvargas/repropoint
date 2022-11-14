@@ -1,23 +1,32 @@
 a {
   color: inherit;
 }
+h1 {
+  font-weight: 900;
+  font-size: 1.8em;
+}
+h2 {
+  font-weight: 600;
+  font-size: 1.6em;
+}
 .navbar {
   display: inline-flex;
   justify-content: flex-end;
   position: absolute;
-  top: 100px;
-  right: 9vw;
+  top: 115px;
+  right: 1vw;
   width: 73vw;
   max-width: 1100px;
   z-index: 200;
   align-items: baseline;
   color: white;
+  white-space: nowrap;
 }
 .navbar a {
   text-decoration: none;
-  font-size: 1.1em;
 }
 .menuItem {
+  font-size: 0.9em;
   list-style-type: none;
   border-radius: 4px;
   border: none;
@@ -33,7 +42,7 @@ a {
 .menuItem a:hover {
   color: white;
 }
-.column {
+.col-dropdown {
   width: 14vw;
   flex-grow: 1;
 }
@@ -43,10 +52,11 @@ a {
   position: absolute;
   background-color: whitesmoke;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 1001;
+  width: 95vw;
 }
 .dd-content a {
-  font-size: 80%;
+  font-size: 1em;
 }
 .dropdown:hover .dd-content {
   display: flex;
@@ -54,32 +64,27 @@ a {
   color: black;
   animation: fade 0.7s;
 }
-/* specific for category */
-.eco {
-  width: 90vw;
-  left: -20vw;
-  right: 0;
+
+.office {
+  /* left: -170px; */
+  right: 10px;
 }
-.studio {
-  left: -50px;
-  right: 50px;
-}
-.row {
+.row-dropdown {
   padding: 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
 }
-/* Style links inside the columns */
-.column a {
+/* Style links inside the col-dropdowns */
+.col-dropdown a {
   float: none;
   text-decoration: none;
   display: block;
   text-align: left;
 }
 /* Add a background color on hover */
-.column a:hover {
+.col-dropdown a:hover {
   background-color: #ddd;
   color: #e5007e;
 }
@@ -98,15 +103,18 @@ a {
   padding: 16px;
 }
 .submenu {
-  padding: 6px;
+  padding: 2px 6px;
   color: black;
+}
+.small-height {
+  line-height: 1.1em;
 }
 .submenu a {
   color: black;
 }
 .submEco {
   padding: 2px 20px;
-  right: 1px;
+  /* right: 1px; */
   width: 25%;
 }
 
@@ -138,24 +146,7 @@ a {
   padding: 0;
   line-height: 1;
 }
-/* added style to links to look like a button */
-.myButton,
-.button {
-  border-radius: 100px;
-  border: 1px solid #e5007e;
-  color: white;
-  padding: 10px 20px;
-  font-weight: bold;
-  font-size: large;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  background-color: #e5007e;
-  text-transform: uppercase;
-}
-.myButton:hover {
-  background-color: white;
-}
+
 #footer-wrapper {
   background-color: #fafafa;
 }
@@ -180,8 +171,6 @@ a {
   }
 }
 
-/* ON 31 August this section goes live AV
-
 #footer-wrapper {
   background-image: url("https://cdn-asset-stl-1.airsquare.com/repropoint/library/pattern-fade-transparent-25.png");
   background-size: 50vw;
@@ -193,6 +182,10 @@ a {
   content: url(https://cdn-asset-stl-1.airsquare.com/repropoint/library/logo-space-top.png);
 }
 
+.product-category-panel-listing.over-image h3,
+.product-category-listing.over-image h3 {
+  font-size: 1.2em;
+}
 .overlay-heading h3 {
   background-color: #e5007e;
   font-weight: 900;
@@ -202,4 +195,29 @@ a {
   opacity: 0.05 !important;
   border-radius: 15px;
 }
-*/
+.header-slideshow-pager.dash {
+  z-index: 199;
+}
+/* Make logo stand to the left */
+#header-bottom-layout-top {
+  justify-content: flex-start;
+}
+/* Make logo smaller */
+#header-bottom-logo img {
+  width: 200px;
+}
+/* New category image boxes */
+.listing-landscape-4-3 img {
+  max-height: 15vw;
+}
+.listing-landscape-4-3 h4 {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #e5007e;
+  font-weight: 900;
+  text-shadow: 0px 1px, 1px 0px, 1px 1px;
+  padding: 0 6px;
+}
+/* Remove original footer */
+#footer-top {
+  display: none;
+}
